@@ -9,8 +9,10 @@ import static org.junit.Assert.*;
  * @date Created on 16:56 2017/12/10.
  */
 public class SimpleControllerTest {
+    private SimpleController simpleController = new SimpleController();
     @Test
     public void home() throws Exception {
+        assertEquals("Hello World!",simpleController.home());
     }
 
     @Test
