@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
- * @date Created on 13:26 2017/12/10.
+ * @date Created on 13:41 2017/12/10.
  */
 public class HelloWorldTest {
 
@@ -17,8 +17,10 @@ public class HelloWorldTest {
     public void setup() {
         subject = new HelloWorld();
     }
+
     @Test
     public void getMessage() throws Exception {
+
         assertEquals("Hello World!", subject.getMessage(false));
     }
 
