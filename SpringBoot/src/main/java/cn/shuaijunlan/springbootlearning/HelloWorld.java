@@ -1,4 +1,4 @@
-package springbootlearning;
+package cn.shuaijunlan.springbootlearning;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
