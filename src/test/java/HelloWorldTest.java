@@ -1,4 +1,3 @@
-import cn.shuaijunlan.springbootlearning.HelloWorld;
 import org.junit.Before;
 import org.junit.Test;
 
