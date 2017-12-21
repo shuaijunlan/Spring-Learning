@@ -1,5 +1,6 @@
 package cn.shuaijunlan.learning.springboot.simplecontroller;
 
+import cn.shuaijunlan.learning.springboot.controller.SimpleControllerExample;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +16,13 @@ import static org.junit.Assert.*;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SimpleControllerTest {
+public class SimpleControllerExampleTest {
     @Autowired
-    private SimpleController simpleController1;
+    private SimpleControllerExample simpleControllerExample1;
 
     @Test
     public void getString() throws Exception {
-        assertEquals("hello SimpleController1!", simpleController1.getString());
+        assertEquals("hello SimpleController1!", simpleControllerExample1.getString());
     }
 
 }

@@ -6,3 +6,13 @@ person:
   name: shuaijunlan
   age: 20
   height: 1.80
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.199.210.120:3306/spring_learning
+    username: spring
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
