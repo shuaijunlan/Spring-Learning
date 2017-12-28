@@ -12,14 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
- * @date Created on 16:20 2017/12/28.
+ * @date Created on 18:36 2017/12/28.
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class RequestAspect {
     private static final Logger logger = LoggerFactory.getLogger(RequestAspect.class);
 
-    @Pointcut("execution(public * cn.shuaijunlan.learning.springboot.controller.PersonControllerExample.*(..))")
+    @Pointcut("execution(* cn.shuaijunlan.learning.springboot.controller.PersonControllerExample.*(..))")
+//    @Pointcut("execution(public * sample.aop.service.PersonService.insertTwoPersons())"
+//    @Pointcut("execution(* sample..*Service.*(..))")
     public void log(){
 
     }

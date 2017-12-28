@@ -19,12 +19,12 @@ public class PersonService {
     public  void insertTwoPersons() {
 
         Person personA = new  Person();
-        personA.setAge(15);
+        personA.setAge(25);
         personA.setHeight(1.22F);
         personA.setName("lc");
 
         Person personB = new  Person();
-        personB.setAge(17);
+        personB.setAge(26);
         personB.setHeight(1.56F);
         personB.setName("lc1");
         personRepository.save(personA);
