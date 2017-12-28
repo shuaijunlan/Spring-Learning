@@ -1,6 +1,6 @@
 package cn.shuaijunlan.learning.springboot.service;
 
-import cn.shuaijunlan.learning.springboot.entity.Person;
+import cn.shuaijunlan.learning.springboot.domain.Person;
 import cn.shuaijunlan.learning.springboot.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

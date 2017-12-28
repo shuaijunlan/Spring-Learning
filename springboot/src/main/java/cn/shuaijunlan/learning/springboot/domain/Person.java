@@ -1,8 +1,9 @@
-package cn.shuaijunlan.learning.springboot.entity;
+package cn.shuaijunlan.learning.springboot.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
@@ -18,6 +19,8 @@ public class Person {
 
     private Float height;
 
+    //  age >= 18
+    @Min(value = 18, message = "No admittance!")
     private Integer age;
 
     public Integer getId() {
@@ -50,5 +53,15 @@ public class Person {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", height=" + height +
+                ", age=" + age +
+                '}';
     }
 }

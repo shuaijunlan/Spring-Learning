@@ -1,6 +1,6 @@
 package cn.shuaijunlan.learning.springboot.repository;
 
-import cn.shuaijunlan.learning.springboot.entity.Person;
+import cn.shuaijunlan.learning.springboot.domain.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
