@@ -23,8 +23,6 @@ public class PersonService {
         personA.setHeight(1.22F);
         personA.setName("lc");
 
-
-
         Person personB = new  Person();
         personB.setAge(26);
         personB.setHeight(1.56F);
