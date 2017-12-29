@@ -1,10 +1,14 @@
 package cn.shuaijunlan.learning.springboot.controller;
 
 import cn.shuaijunlan.learning.springboot.domain.Person;
+import cn.shuaijunlan.learning.springboot.domain.ResponseResult;
 import cn.shuaijunlan.learning.springboot.repository.PersonRepository;
+import cn.shuaijunlan.learning.springboot.service.PersonService;
+import cn.shuaijunlan.learning.springboot.utils.ResponseResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +25,9 @@ public class PersonControllerExample {
     @Autowired
     private PersonRepository personRepository;
 
+    @Autowired
+    private PersonService personService;
+
     @GetMapping(value = "/personList")
     public List<Person> getPersonList(){
         return personRepository.findAll();
@@ -32,12 +39,18 @@ public class PersonControllerExample {
      * @return
      */
     @PostMapping(value = "/addPerson")
-    public Person addPerson(@Valid Person person, BindingResult bindingResult){
+    public ResponseResult<Person> addPerson(@Valid Person person, BindingResult bindingResult){
+        ResponseResult<Person> responseResult = new ResponseResult<>();
+
         //  没有验证通过
         if (bindingResult.hasErrors()){
-            System.out.println(bindingResult.getFieldError().getDefaultMessage());
-            return null;
+            return ResponseResultUtil.fail(1, bindingResult.getFieldError().getDefaultMessage(), null);
+        }else {
+            return ResponseResultUtil.success(personRepository.save(person));
         }
-        return personRepository.save(person);
+    }
+    @GetMapping(value = "person/getAge/{id}")
+    public void getAgeById(@PathVariable("id") Integer id) throws Exception {
+        personService.getPersonByAge(id);
     }
 }

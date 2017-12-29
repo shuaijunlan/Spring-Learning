@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletRequest;
  * @author Junlan Shuai[shuaijunlan@gmail.com].
  * @date Created on 18:36 2017/12/28.
  */
-//@Aspect
-//@Component
+@Aspect
+@Component
 public class RequestAspect {
     private static final Logger logger = LoggerFactory.getLogger(RequestAspect.class);
 
