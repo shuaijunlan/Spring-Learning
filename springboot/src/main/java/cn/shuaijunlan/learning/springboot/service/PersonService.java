@@ -44,6 +44,7 @@ public class PersonService {
         if (age < 20){
             throw new PersonException(ResponseResultEnum.FORBIDDEN);
         }
+        throw new PersonException(ResponseResultEnum.UNKNOWN_ERROR);        //  If I don't add this statement, it will throw NullPointer Exception, why?
 
     }
 }
