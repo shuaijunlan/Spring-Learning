@@ -49,7 +49,7 @@ public class PersonControllerExample {
             return ResponseResultUtil.success(personRepository.save(person));
         }
     }
-    @GetMapping(value = "person/getAge/{id}")
+    @GetMapping(value = "/person/getAge/{id}")
     public void getAgeById(@PathVariable("id") Integer id) throws Exception {
         personService.getPersonByAge(id);
     }
