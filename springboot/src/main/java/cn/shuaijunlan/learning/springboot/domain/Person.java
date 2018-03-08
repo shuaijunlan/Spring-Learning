@@ -19,7 +19,9 @@ public class Person {
 
     private Float height;
 
-    //  age >= 18
+    /**
+     * age >= 18
+     */
     @Min(value = 18, message = "No admittance!")
     private Integer age;
 

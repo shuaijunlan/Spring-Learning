@@ -1,6 +1,7 @@
 package cn.shuaijunlan.learning.springboot.service;
 
 import cn.shuaijunlan.learning.springboot.domain.Person;
+import cn.shuaijunlan.learning.springboot.domain.ResponseResult;
 import cn.shuaijunlan.learning.springboot.enums.ResponseResultEnum;
 import cn.shuaijunlan.learning.springboot.exception.PersonException;
 import cn.shuaijunlan.learning.springboot.repository.PersonRepository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.criteria.CriteriaBuilder;
+import java.util.Optional;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
@@ -19,7 +21,7 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public  void insertTwoPersons() {
 
         Person personA = new  Person();
@@ -35,16 +37,21 @@ public class PersonService {
         personRepository.save(personB);
     }
 
-    public void getPersonByAge(Integer id) throws Exception {
-        Person person = personRepository.findOne(id);
-        if (person == null){
-            return ;
+    public Person getPersonById(Integer id) throws Exception {
+
+        Optional<Person> person = personRepository.findById(id);
+
+
+        if (!person.isPresent()){
+            return null;
         }
-        Integer age = person.getAge();
-        if (age < 20){
+        Integer age = person.get().getAge();
+        Integer limitAge = 20;
+        if (age < limitAge){
             throw new PersonException(ResponseResultEnum.FORBIDDEN);
         }
-        throw new PersonException(ResponseResultEnum.UNKNOWN_ERROR);        //  If I don't add this statement, it will throw NullPointer Exception, why?
-
+        // If I don't add this statement, it will throw NullPointer Exception, why?
+        // throw new PersonException(ResponseResultEnum.UNKNOWN_ERROR);
+        return person.get();
     }
 }

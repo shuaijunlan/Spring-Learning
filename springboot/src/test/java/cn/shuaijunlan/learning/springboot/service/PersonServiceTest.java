@@ -25,7 +25,7 @@ public class PersonServiceTest {
 
     @Test
     public void getPersonByAge() throws Exception {
-        personService.getPersonByAge(55);
+        personService.getPersonById(55);
 //        Assert.assertEquals();
     }
 
