@@ -50,7 +50,7 @@ public class PersonControllerExample {
         }
     }
     @GetMapping(value = "/person/getAge/{id}")
-    public void getAgeById(@PathVariable("id") Integer id) throws Exception {
-        personService.getPersonByAge(id);
+    public Person getAgeById(@PathVariable("id") Integer id) throws Exception {
+        return personService.getPersonById(id);
     }
 }
