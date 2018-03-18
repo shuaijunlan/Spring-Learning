@@ -9,3 +9,7 @@ spring:
 
 server:
   port: 2001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/

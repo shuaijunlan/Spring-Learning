@@ -8,3 +8,7 @@ spring:
           uri: http://git.oschina.net/didispace/config-repo-demo/
 server:
   port: 1201
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
