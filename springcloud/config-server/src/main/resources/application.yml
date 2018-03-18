@@ -5,9 +5,10 @@ spring:
     config:
       server:
         git:
-          uri: http://git.oschina.net/didispace/config-repo-demo/
+          uri: http://git.oschina.net/didispace/SpringBoot-Learning/
+          search-paths: Chapter9-1-4/config-repo
 server:
-  port: 1201
+  port: 7001
 eureka:
   client:
     service-url:
