@@ -6,18 +6,19 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>simpledemo</artifactId>
+    <artifactId>springmybatis</artifactId>
     <packaging>war</packaging>
-    <name>simpledemo Maven Webapp</name>
+    <name>springmybatis Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>RELEASE</version>
+            <version>3.8.1</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
-        <finalName>simpledemo</finalName>
+        <finalName>springmybatis</finalName>
     </build>
 </project>
