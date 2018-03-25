@@ -1,12 +1,12 @@
 package cn.shuaijunlan.learning.springboot.utils;
 
 import cn.shuaijunlan.learning.springboot.domain.ResponseResult;
-
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
  * @date Created on 9:37 2017/12/29.
  */
 public class ResponseResultUtil {
+
     public static ResponseResult success(Object object){
         ResponseResult responseResult = new ResponseResult();
         responseResult.setCode(0);
