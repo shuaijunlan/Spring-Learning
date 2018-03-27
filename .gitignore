@@ -28,4 +28,6 @@ hs_err_pid*
 /src/
 target/
 PLANS.md
+mvnw
+mvnw.cmd
 

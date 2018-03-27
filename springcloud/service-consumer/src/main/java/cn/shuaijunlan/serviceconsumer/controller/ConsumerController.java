@@ -28,7 +28,7 @@ public class ConsumerController {
     @GetMapping(value = "/consumer")
     public String consumer(){
         ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client");
-        String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/hello";
+        String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/dc";
         logger.info(url);
         return restTemplate.getForObject(url, String.class);
     }

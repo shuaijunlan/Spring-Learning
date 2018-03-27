@@ -25,8 +25,9 @@ public class HelloController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @GetMapping(value = "/hello")
-    public String getHello(){
+    @GetMapping(value = "/dc")
+    public String getHello() throws InterruptedException {
+        Thread.sleep(5000L);
         String services = "Services: " + discoveryClient.getServices();
         logger.info(services);
         return "hello";
