@@ -22,7 +22,7 @@ public class SimpleControllerExampleTest {
 
     @Test
     public void getString() throws Exception {
-        assertEquals("hello SimpleController1!", simpleControllerExample1.getString());
+        assertEquals("SimpleController", simpleControllerExample1.getString());
     }
 
 }
