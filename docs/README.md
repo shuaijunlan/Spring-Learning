@@ -11,7 +11,7 @@ Providing comprehensive learning-notes and demos about all spring components
 
 **Services Register and Discovery**
 
-**Services Coumer**
+**Services Consumer**
 
 **Distributed Configuration Center**
 
