@@ -9,9 +9,9 @@ Providing comprehensive learning-notes and demos about all spring components
 ## Spring Boot
 ## Spring Cloud
 
-**Services Register and Discovery **
+**Services Register and Discovery**
 
-**Services Coumer **
+**Services Coumer**
 
 **Distributed Configuration Center**
 
