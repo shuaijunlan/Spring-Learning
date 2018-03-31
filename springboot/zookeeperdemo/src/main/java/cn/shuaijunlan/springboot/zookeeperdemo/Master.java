@@ -22,11 +22,11 @@ public class Master implements Watcher {
     }
     @Override
     public void process(WatchedEvent event) {
-        System.out.println(event);
+        System.out.println("evevt:" + event);
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Master master = new Master("139.199.210.120:2181");
+        Master master = new Master("139.199.210.120:2182,139.199.210.120:2181,139.199.210.120:2183");
         master.startZk();
 
         Thread.sleep(60000);
