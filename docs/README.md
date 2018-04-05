@@ -7,7 +7,9 @@ Providing comprehensive learning-notes and demos about all spring components
 
 ### Spring
 
-**Achieve Transactional Demo** [[Article](Achieve-Transaction-Based-On-Spring.md)   [Demo](https://github.com/shuaijunlan/Spring-Learning/tree/master/spring/src/main/java/cn/shuaijunlan/spring)]
+**Achieve Transactional Demo** [[Article](Achieve-Transaction-Based-On-Spring.md)   [Demo](https://github.com/shuaijunlan/Spring-Learning/tree/master/spring/src/main/java/cn/shuaijunlan/spring/transaction)]
+
+**Creating Spring Beans in Three Ways** [[Article](Creating-Spring-Beans-in-Three-Ways.md)   [Demo](https://github.com/shuaijunlan/Spring-Learning/tree/master/spring/src/main/java/cn/shuaijunlan/spring/transaction)]
 
 ### Spring MVC
 **A Simple SpringMVC Controller Demo**  [[Link](A-Simple-SpringMVC-Controller-Demo.md)]

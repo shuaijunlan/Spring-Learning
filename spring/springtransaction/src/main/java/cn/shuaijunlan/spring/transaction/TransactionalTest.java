@@ -1,4 +1,4 @@
-package cn.shuaijunlan.spring;
+package cn.shuaijunlan.spring.transaction;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

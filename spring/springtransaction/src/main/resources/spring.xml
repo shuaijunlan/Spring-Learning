@@ -24,6 +24,6 @@
     <bean id="appTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
-    <context:component-scan base-package="cn.shuaijunlan.spring"/>
+    <context:component-scan base-package="cn.shuaijunlan.spring.transaction"/>
     <tx:annotation-driven proxy-target-class="true" transaction-manager="appTransactionManager" />
 </beans>

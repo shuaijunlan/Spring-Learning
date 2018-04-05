@@ -1,7 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+    <modules>
+        <module>springbeans</module>
+        <module>springtransaction</module>
+    </modules>
     <artifactId>spring</artifactId>
     <url>http://maven.apache.org</url>
     <parent>
@@ -9,36 +13,5 @@
         <groupId>cn.shuaijunlan</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-
-    <properties>
-        <spring.verion>5.0.4.RELEASE</spring.verion>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.verion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>${spring.verion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.verion}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.45</version>
-        </dependency>
-    </dependencies>
-
 
 </project>

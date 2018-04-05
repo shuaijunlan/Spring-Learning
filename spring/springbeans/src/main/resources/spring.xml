@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person1" class="cn.shuaijunlan.spring.springbeans.Person1">
+        <property name="age">
+            <value>22</value>
+        </property>
+    </bean>
+
+    <bean id="person2Factory" class="cn.shuaijunlan.spring.springbeans.Person2Factory" factory-method="getInstance"/>
+
+    <bean id="person3Factory" class="cn.shuaijunlan.spring.springbeans.Person3Factory"/>
+    <bean id="person3" factory-bean="person3Factory" factory-method="getInstance">
+        <property name="age">
+            <value>22</value>
+        </property>
+    </bean>
+</beans>
