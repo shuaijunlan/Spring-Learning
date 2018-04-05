@@ -17,8 +17,7 @@ import java.sql.Statement;
  * @date Created on 18:28 2018/3/31.
  */
 @Component
-
-public class TransactionalTest {
+public class TransactionalDemo {
 
     @Autowired
     private DataSource dataSource;
