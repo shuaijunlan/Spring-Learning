@@ -1,7 +1,6 @@
 package cn.shuaijunlan.simpledemo.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,11 +13,16 @@ import java.util.List;
  * @date Created on 14:15 2018/3/22.
  */
 @Controller
-@ResponseBody
 public class HelloController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String getHello(){
+    public String getHelloPage(){
+        return "hello";
+    }
+
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    @ResponseBody
+    public String getHelloString(){
         return "hello";
     }
 
