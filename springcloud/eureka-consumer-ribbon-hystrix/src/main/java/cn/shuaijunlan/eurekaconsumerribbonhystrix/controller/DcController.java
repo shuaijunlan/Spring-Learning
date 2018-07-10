@@ -19,7 +19,7 @@ public class DcController {
 
 
     @GetMapping("/consumer")
-    public String dc(){
+    public String dc() {
         return consumerService.consumer();
     }
 

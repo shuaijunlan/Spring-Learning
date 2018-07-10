@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class Tets {
     @GetMapping(value = "name")
-    public String getName(){
+    public String getName() {
         return "ShuaiJunlan";
     }
 }

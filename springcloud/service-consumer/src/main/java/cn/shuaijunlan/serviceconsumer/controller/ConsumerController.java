@@ -20,13 +20,13 @@ public class ConsumerController {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    private LoadBalancerClient  loadBalancerClient;
+    private LoadBalancerClient loadBalancerClient;
 
     @Autowired
     private RestTemplate restTemplate;
 
     @GetMapping(value = "/consumer")
-    public String consumer(){
+    public String consumer() {
         ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-client");
         String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/dc";
         logger.info(url);

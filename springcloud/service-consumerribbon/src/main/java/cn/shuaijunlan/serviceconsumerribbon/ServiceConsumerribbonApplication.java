@@ -7,16 +7,19 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * @author junlan
+ */
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ServiceConsumerribbonApplication {
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate(){
-		return new RestTemplate();
-	}
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(ServiceConsumerribbonApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceConsumerribbonApplication.class, args);
+    }
 }

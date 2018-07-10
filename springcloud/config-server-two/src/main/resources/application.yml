@@ -8,7 +8,7 @@ spring:
           uri: http://git.oschina.net/didispace/SpringBoot-Learning/
           search-paths: Chapter9-1-4/config-repo
 server:
-  port: 7001
+  port: 7002
 eureka:
   client:
     service-url:

@@ -21,7 +21,6 @@ public class HelloController {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
 
-
     @Autowired
     private DiscoveryClient discoveryClient;
 

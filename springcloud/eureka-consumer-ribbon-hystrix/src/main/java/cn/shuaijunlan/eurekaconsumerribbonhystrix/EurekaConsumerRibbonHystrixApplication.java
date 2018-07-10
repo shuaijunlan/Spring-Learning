@@ -12,12 +12,13 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 public class EurekaConsumerRibbonHystrixApplication {
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
-	public static void main(String[] args) {
-		SpringApplication.run(EurekaConsumerRibbonHystrixApplication.class, args);
-	}
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaConsumerRibbonHystrixApplication.class, args);
+    }
 }

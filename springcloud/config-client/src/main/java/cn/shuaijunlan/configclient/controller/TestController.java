@@ -17,7 +17,7 @@ public class TestController {
 //    private String from;
 
     @GetMapping(value = "/from")
-    public String from(){
+    public String from() {
         return "from";
     }
 }
