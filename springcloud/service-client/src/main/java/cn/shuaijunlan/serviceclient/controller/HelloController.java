@@ -26,6 +26,7 @@ public class HelloController {
 
     @GetMapping(value = "/dc")
     public String getHello() throws InterruptedException {
+        //触发服务降级逻辑
         Thread.sleep(5000L);
         String services = "Services: " + discoveryClient.getServices();
         logger.info(services);
