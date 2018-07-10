@@ -28,6 +28,7 @@ public class HelloController {
     public String getHello() throws InterruptedException {
         //触发服务降级逻辑
         Thread.sleep(5000L);
+        logger.info("Sleeping {}ms!", 5000);
         String services = "Services: " + discoveryClient.getServices();
         logger.info(services);
         return "hello";

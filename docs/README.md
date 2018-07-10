@@ -16,11 +16,25 @@ Providing comprehensive learning-notes and demos about all spring components
 ### Spring Boot
 ### Spring Cloud
 
-**Services Register and Discovery**
+**服务注册与发现**
 
-**Services Consumer**
+**服务消费者**
 
-**Distributed Configuration Center**
+**分布式配置中心（基础）**
 
-**Services Fault-tolerant**
+**分布式配置中心（加密与解密）**
+
+**分布式配置中心（高可用与动态刷新）**
+
+**服务容错保护---基于Hystrix实现服务降级**
+
+**服务容错保护---基于Hysrtrix实现依赖隔离**
+
+**服务容错保护---基于Hystrix实现断路器**
+
+
+
+### Acknowledge
+
+
 
