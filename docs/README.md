@@ -32,8 +32,6 @@ Providing comprehensive learning-notes and demos about all spring components
 
 **服务容错保护---基于Hystrix实现断路器**
 
-
-
 ### Acknowledge
 
 
