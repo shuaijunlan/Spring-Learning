@@ -20,6 +20,8 @@
 		<module>config-server-two</module>
 		<module>eureka-consumer-ribbon-hystrix</module>
 		<module>service-consumerribbon</module>
+		<module>hystrix-dashboard</module>
+        <module>turbine</module>
 	</modules>
 
 	<parent>
