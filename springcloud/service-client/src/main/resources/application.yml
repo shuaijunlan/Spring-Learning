@@ -9,3 +9,5 @@ eureka:
     hostname: localhost
 server:
   port: 1112
+swagger:
+  base-package: cn.shuaijunlan

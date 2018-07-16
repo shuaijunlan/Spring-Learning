@@ -1,10 +1,8 @@
 package cn.shuaijunlan.serviceclient.controller;
 
-import com.netflix.discovery.converters.Auto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +25,7 @@ public class HelloController {
     @GetMapping(value = "/dc")
     public String getHello() throws InterruptedException {
         //触发服务降级逻辑
-        Thread.sleep(5000L);
+        Thread.sleep(500L);
         logger.info("Sleeping {}ms!", 5000);
         String services = "Services: " + discoveryClient.getServices();
         logger.info(services);
