@@ -25,3 +25,11 @@ Providing comprehensive learning-notes and demos about all spring components.
 
 #### Spring MVC
 
+
+
+#### 	Dubbo
+
+| Title                             | Demo URL | Article URL |
+| --------------------------------- | -------- | ----------- |
+| 基于Dubbo的点对点通信实现服务消费 |          |             |
+|                                   |          |             |

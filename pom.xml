@@ -10,6 +10,7 @@
         <module>springcloud</module>
         <module>springmvc</module>
         <module>spring</module>
+        <module>dubbo</module>
     </modules>
     <name>springlearning Maven Webapp</name>
     <url>http://maven.apache.org</url>
