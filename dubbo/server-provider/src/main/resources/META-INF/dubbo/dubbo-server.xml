@@ -7,6 +7,13 @@
     <!--<dubbo:registry address="N/A" />-->
     <dubbo:registry address="zookeeper://218.199.102.34:2181"/>
 
-    <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" />
+    <!--protocal configuration-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="hessian" port="8011"/>
+
+    <!--service configuration-->
+    <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo"/>
+    <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService2" protocol="hessian"/>
     <bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestServiceImpl" name="testService" />
+    <bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestService2Impl" name="testService2"/>
 </beans>
