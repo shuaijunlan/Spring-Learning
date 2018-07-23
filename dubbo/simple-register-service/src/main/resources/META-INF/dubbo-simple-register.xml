@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd        http://code.alibabatech.com/schema/dubbo      http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <dubbo:application name="simple-register" owner="Junlan" />
+
+    <!--protocal configuration-->
+    <dubbo:protocol port="9090"/>
+
+
+    <!--service configuration-->
+    <dubbo:service interface="com.alibaba.dubbo.registry.RegistryService">
+        <dubbo:method name="subscribe"><dubbo:argument index="1" callback="true"/> </dubbo:method>
+        <dubbo:method name="unsubscribe"><dubbo:argument index="1" callback="false"/> </dubbo:method>
+    </dubbo:service>
+    <!--<bean class="com.alibaba.dubbo.registry.simple" name="registerService" />-->
+</beans>

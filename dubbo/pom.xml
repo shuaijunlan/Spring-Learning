@@ -15,6 +15,7 @@
         <module>server-api</module>
         <module>server-provider</module>
         <module>dubbo-client-demo</module>
+        <module>simple-register-service</module>
     </modules>
     <properties>
         <dubbo.version>2.6.2</dubbo.version>

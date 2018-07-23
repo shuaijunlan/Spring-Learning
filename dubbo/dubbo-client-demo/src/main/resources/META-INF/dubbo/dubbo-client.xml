@@ -8,5 +8,5 @@
     <dubbo:registry address="zookeeper://218.199.102.34:2181"/>
     <!--<dubbo:reference id="testService" interface="cn.shuaijunlan.dubbo.learning.service.ITestService"-->
                      <!--url="dubbo://211.69.197.55:20880/cn.shuaijunlan.dubbo.learning.service.ITestService"/>-->
-    <dubbo:reference interface="cn.shuaijunlan.dubbo.learning.service.ITestService" id="testService"/>
+    <dubbo:reference interface="cn.shuaijunlan.dubbo.learning.service.ITestService" id="testService" check="false"/>
 </beans>
