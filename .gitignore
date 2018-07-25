@@ -30,4 +30,5 @@ target/
 PLANS.md
 mvnw
 mvnw.cmd
+build/
 
