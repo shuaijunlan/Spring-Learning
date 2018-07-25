@@ -23,6 +23,8 @@
 		<module>hystrix-dashboard</module>
         <module>turbine</module>
 		<module>api-gateway</module>
+		<module>service-trace</module>
+		<module>zipkin-server</module>
 	</modules>
 
 	<parent>

@@ -22,6 +22,7 @@ Providing comprehensive learning-notes and demos about all spring components.
 | Hystrix监控面板                           |          |             |
 | Hystrix监控数据聚合                       |          |             |
 | 基于Zuul实现服务网关                      |          |             |
+| 分布式服务追踪                            |          |             |
 
 #### Spring MVC
 
