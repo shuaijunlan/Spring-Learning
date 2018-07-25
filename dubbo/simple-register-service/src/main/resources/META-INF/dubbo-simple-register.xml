@@ -14,5 +14,6 @@
         <dubbo:method name="subscribe"><dubbo:argument index="1" callback="true"/> </dubbo:method>
         <dubbo:method name="unsubscribe"><dubbo:argument index="1" callback="false"/> </dubbo:method>
     </dubbo:service>
+    <!--simple register is not supported as far -->
     <!--<bean class="com.alibaba.dubbo.registry.simple" name="registerService" />-->
 </beans>
