@@ -4,6 +4,7 @@ MAINTAINER Junlan Shuai <shuaijunlan.gmail.com>
 
 COPY docker-entrypoint.sh /usr/local/bin
 COPY . /root/workspace
+
 WORKDIR /root/workspace
 RUN mvn clean
 RUN mvn install -DskipTests
