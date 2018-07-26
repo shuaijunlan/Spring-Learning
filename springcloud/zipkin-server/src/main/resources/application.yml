@@ -3,6 +3,6 @@ spring:
     name: zipkin-server
 server:
   port: 9411
-  client:
-    service-url:
-      defaultZone: http://localhost:1111/eureka/
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:1111/eureka/

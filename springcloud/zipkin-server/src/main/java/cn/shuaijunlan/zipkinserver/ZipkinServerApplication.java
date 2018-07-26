@@ -9,7 +9,6 @@ import zipkin.server.EnableZipkinServer;
  * @author junlan
  */
 @EnableZipkinServer
-@EnableEurekaClient
 @SpringBootApplication
 public class ZipkinServerApplication {
 
