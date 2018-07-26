@@ -8,7 +8,7 @@ COPY . /home/junlan/workspace/Spring-Learning
 WORKDIR /home/junlan/workspace/Spring-Learning
 
 RUN mvn clean
-RUN mvn install -DskipTests
+RUN mvn install -pl springcloud/service-register -am -DskipTests
 
 RUN set -ex \
  && chmod a+x /usr/local/bin/docker-entrypoint.sh
