@@ -3,17 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd        http://code.alibabatech.com/schema/dubbo      http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-    <dubbo:application name="simple-register" owner="Junlan" />
+    <dubbo:application name="dubbo-server" owner="Junlan" />
+    <!--<dubbo:registry address="N/A" />-->
+    <dubbo:registry address="zookeeper://218.199.102.34:2181"/>
 
     <!--protocal configuration-->
-    <dubbo:protocol port="9090"/>
-
+    <dubbo:protocol name="dubbo" port="20881"/>
 
     <!--service configuration-->
-    <dubbo:service interface="com.alibaba.dubbo.registry.RegistryService">
-        <dubbo:method name="subscribe"><dubbo:argument index="1" callback="true"/> </dubbo:method>
-        <dubbo:method name="unsubscribe"><dubbo:argument index="1" callback="false"/> </dubbo:method>
-    </dubbo:service>
-    <!--simple register is not supported as far -->
-    <!--<bean class="com.alibaba.dubbo.registry." name="registerService" />-->
+    <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo" loadbalance="roundrobin"/>
+
+    <bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestServiceImpl" name="testService" />
 </beans>

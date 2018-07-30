@@ -6,14 +6,12 @@ import java.io.IOException;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
- * @date Created on 11:09 AM 2018/07/19.
+ * @date Created on 9:13 PM 2018/07/29.
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        ClassPathXmlApplicationContext classPathXmlApplicationContext =
-                new ClassPathXmlApplicationContext("META-INF/dubbo/dubbo-server.xml");
-        classPathXmlApplicationContext.start();
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("META-INF/dubbo/dubbo-server.xml");
+        ctx.start();
         System.in.read();
-
     }
 }
