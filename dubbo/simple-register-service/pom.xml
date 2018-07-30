@@ -9,6 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <version>${parent.version}</version>
+
+
     <artifactId>simple-register-service</artifactId>
 
     <dependencies>

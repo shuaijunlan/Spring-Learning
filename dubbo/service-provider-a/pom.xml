@@ -6,9 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service-provider-a</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+
     <name>service-provider-a</name>
+
 
     <description>service-provider-a</description>
 
