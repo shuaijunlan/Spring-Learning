@@ -14,4 +14,8 @@
     <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo" loadbalance="roundrobin"/>
 
     <bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestServiceImpl" name="testService" />
+
+    <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.IAddName" ref="addName" protocol="dubbo"/>
+
+    <bean class="cn.shuaijunlan.dubbo.learning.service.impl.AddName" name="addName"/>
 </beans>

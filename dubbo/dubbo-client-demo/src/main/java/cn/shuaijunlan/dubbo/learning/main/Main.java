@@ -12,8 +12,8 @@ public class Main {
         ClassPathXmlApplicationContext classPathXmlApplicationContext =
                 new ClassPathXmlApplicationContext("META-INF/dubbo/dubbo-client.xml");
         ITestService service = (ITestService)classPathXmlApplicationContext.getBean("testService");
-        for (int i = 0; i < 10; i++) {
-            System.out.println(service.sayHello("Shuai Junlan"));
+        for (int i = 0; i < 1; i++) {
+            System.out.println(service.sayHello("Shuai Junlan" + i));
         }
 
     }

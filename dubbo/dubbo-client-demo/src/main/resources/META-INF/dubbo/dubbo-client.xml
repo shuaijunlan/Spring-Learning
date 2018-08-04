@@ -4,9 +4,14 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd        http://code.alibabatech.com/schema/dubbo      http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <dubbo:application name="dubbo-client" owner="Junlan"/>
-    <!--<dubbo:registry address="N/A"/>-->
-    <dubbo:registry address="zookeeper://218.199.102.34:2181"/>
-    <!--<dubbo:reference id="testService" interface="cn.shuaijunlan.dubbo.learning.service.ITestService"-->
-                     <!--url="dubbo://211.69.197.55:20880/cn.shuaijunlan.dubbo.learning.service.ITestService"/>-->
-    <dubbo:reference interface="cn.shuaijunlan.dubbo.learning.service.ITestService" id="testService" check="false"/>
+    <!--<dubbo:consumer client="netty"/>-->
+    <dubbo:registry address="N/A"/>
+    <!--<dubbo:registry address="zookeeper://218.199.102.34:2181"/>-->
+    <dubbo:reference id="testService" interface="cn.shuaijunlan.dubbo.learning.service.ITestService"
+                     url="dubbo://211.69.197.55:20881/cn.shuaijunlan.dubbo.learning.service.ITestService"/>
+    <!--<dubbo:reference interface="cn.shuaijunlan.dubbo.learning.service.ITestService" id="testService" check="false"/>-->
+
+    <dubbo:reference interface="cn.shuaijunlan.dubbo.learning.service.IAddName" id="addName" check="false">
+        <dubbo:method name="addName" sent="true" return="false"/>
+    </dubbo:reference>
 </beans>

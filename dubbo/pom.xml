@@ -16,6 +16,7 @@
         <module>dubbo-client-demo</module>
         <module>simple-register-service</module>
         <module>service-provider-a</module>
+        <module>tcc-transaction-dubbo</module>
     </modules>
     <properties>
         <dubbo.version>2.6.2</dubbo.version>
@@ -23,6 +24,7 @@
         <zkclient.version>0.10</zkclient.version>
         <curator.version>2.12.0</curator.version>
         <hessian.version>4.0.51</hessian.version>
+        <netty4.version>4.0.35.Final</netty4.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -58,15 +60,32 @@
                 <artifactId>hessian</artifactId>
                 <version>${hessian.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>2.7.0-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>${dubbo.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>dubbo</artifactId>-->
+            <!--<version>${dubbo.version}</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
