@@ -1,7 +1,10 @@
 package cn.shuaijunlan.dubbo.learning.main;
 
+// import com.alibaba.dubbo.remoting.transport.netty.NettyHandler;
+
 import static org.junit.Assert.*;
 
+import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.apache.dubbo.config.ReferenceConfig;
 import org.apache.dubbo.registry.integration.RegistryDirectory;
 import org.apache.dubbo.registry.integration.RegistryProtocol;
@@ -55,5 +58,8 @@ public class MainTest {
         // ReferenceConfig
         // NettyClientHandler
         // NettyHandler
+        // NettyHandler
+        // ExtensionLoader
+        // ReferenceConfig
     }
 }

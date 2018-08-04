@@ -10,6 +10,8 @@
     <!--protocal configuration-->
     <dubbo:protocol name="dubbo" port="20881"/>
 
+    <dubbo:provider server="netty"/>
+
     <!--service configuration-->
     <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo" loadbalance="roundrobin"/>
 

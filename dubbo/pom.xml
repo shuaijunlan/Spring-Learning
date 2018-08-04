@@ -61,11 +61,11 @@
                 <version>${hessian.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>${netty4.version}</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>io.netty</groupId>-->
+                <!--<artifactId>netty-all</artifactId>-->
+                <!--<version>${netty4.version}</version>-->
+            <!--</dependency>-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>

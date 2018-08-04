@@ -6,6 +6,7 @@
     <dubbo:application name="dubbo-client" owner="Junlan"/>
     <!--<dubbo:consumer client="netty"/>-->
     <dubbo:registry address="N/A"/>
+    <dubbo:consumer client="netty"/>
     <!--<dubbo:registry address="zookeeper://218.199.102.34:2181"/>-->
     <dubbo:reference id="testService" interface="cn.shuaijunlan.dubbo.learning.service.ITestService"
                      url="dubbo://211.69.197.55:20881/cn.shuaijunlan.dubbo.learning.service.ITestService"/>
