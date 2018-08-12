@@ -1,6 +1,7 @@
 package cn.shuaijunlan.dubbo.learning.main;
 
 import cn.shuaijunlan.dubbo.learning.service.IAddName;
+import org.apache.dubbo.rpc.service.EchoService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,6 +12,8 @@ public class Test1 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("META-INF/dubbo/dubbo-client.xml");
         IAddName addName = (IAddName)ctx.getBean("addName");
+        EchoService echoService = (EchoService) addName;
+        echoService.$echo("hello");
         addName.addName("Shuai Junlan");
     }
 }
