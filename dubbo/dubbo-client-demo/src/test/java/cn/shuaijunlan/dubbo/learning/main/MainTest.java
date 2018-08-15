@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
 import org.apache.dubbo.common.compiler.Compiler;
 import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.apache.dubbo.config.ReferenceConfig;
+import org.apache.dubbo.config.spring.ReferenceBean;
+import org.apache.dubbo.config.spring.schema.DubboNamespaceHandler;
 import org.apache.dubbo.registry.integration.RegistryDirectory;
 import org.apache.dubbo.registry.integration.RegistryProtocol;
 import org.apache.dubbo.remoting.Transporters;
@@ -74,5 +76,7 @@ public class MainTest {
         // Protocol
         // Compiler
         // FailoverClusterInvoker
+        // DubboNamespaceHandler
+        // ReferenceBean
     }
 }
