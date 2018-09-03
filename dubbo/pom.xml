@@ -17,6 +17,7 @@
         <module>simple-register-service</module>
         <module>service-provider-a</module>
         <module>tcc-transaction-dubbo</module>
+        <module>service-provider-b</module>
     </modules>
     <properties>
         <dubbo.version>2.6.2</dubbo.version>

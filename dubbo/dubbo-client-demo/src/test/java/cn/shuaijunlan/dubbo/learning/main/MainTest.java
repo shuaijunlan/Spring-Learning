@@ -8,6 +8,7 @@ import org.apache.dubbo.common.compiler.Compiler;
 import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.apache.dubbo.config.ReferenceConfig;
 import org.apache.dubbo.config.spring.ReferenceBean;
+import org.apache.dubbo.config.spring.ServiceBean;
 import org.apache.dubbo.config.spring.schema.DubboNamespaceHandler;
 import org.apache.dubbo.registry.integration.RegistryDirectory;
 import org.apache.dubbo.registry.integration.RegistryProtocol;
@@ -31,6 +32,7 @@ import org.apache.dubbo.rpc.protocol.dubbo.DubboInvoker;
 import org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol;
 import org.apache.dubbo.rpc.protocol.dubbo.filter.FutureFilter;
 import org.apache.dubbo.rpc.proxy.InvokerInvocationHandler;
+import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
@@ -78,5 +80,7 @@ public class MainTest {
         // FailoverClusterInvoker
         // DubboNamespaceHandler
         // ReferenceBean
+        // ServiceBean
+        // ClassPathBeanDefinitionScanner
     }
 }
