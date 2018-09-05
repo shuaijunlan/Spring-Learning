@@ -5,7 +5,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd        http://code.alibabatech.com/schema/dubbo      http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <dubbo:application name="dubbo-server" owner="Junlan" />
-    <!--<dubbo:registry address="N/A" />-->
+    <!--<MEAT-INF.dubbo:registry address="N/A" />-->
     <dubbo:registry address="zookeeper://218.199.102.34:2181"/>
 
     <!--protocal configuration-->
@@ -16,11 +16,11 @@
     <dubbo:annotation package="cn.shuaijunlan.dubbo.learning"/>
 
     <!--service configuration-->
-    <!--<dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo" loadbalance="roundrobin"/>-->
+    <!--<MEAT-INF.dubbo:service interface="cn.shuaijunlan.MEAT-INF.dubbo.learning.service.ITestService" ref="testService" protocol="MEAT-INF.dubbo" loadbalance="roundrobin"/>-->
 
-    <!--<bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestServiceImpl" name="testService" />-->
+    <!--<bean class="cn.shuaijunlan.MEAT-INF.dubbo.TestServiceImpl" name="testService" />-->
 
-    <!--<dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.IAddName" ref="addName" protocol="dubbo"/>-->
+    <!--<MEAT-INF.dubbo:service interface="cn.shuaijunlan.MEAT-INF.dubbo.learning.service.IAddName" ref="addName" protocol="MEAT-INF.dubbo"/>-->
 
-    <!--<bean class="cn.shuaijunlan.dubbo.learning.service.impl.AddName" name="addName"/>-->
+    <!--<bean class="cn.shuaijunlan.MEAT-INF.dubbo.AddName" name="addName"/>-->
 </beans>

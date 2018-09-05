@@ -4,7 +4,7 @@
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd        http://code.alibabatech.com/schema/dubbo      http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <dubbo:application name="dubbo-server" owner="Junlan" />
-    <!--<dubbo:registry address="N/A" />-->
+    <!--<MEAT-INF.dubbo:registry address="N/A" />-->
     <dubbo:registry address="zookeeper://218.199.102.34:2181"/>
 
     <!--protocal configuration-->
@@ -14,6 +14,6 @@
     <!--service configuration-->
     <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo"/>
     <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService2" protocol="hessian"/>
-    <bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestServiceImpl" name="testService" />
+    <bean class="cn.shuaijunlan.dubbo.TestServiceImpl" name="testService" />
     <bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestService2Impl" name="testService2"/>
 </beans>

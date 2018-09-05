@@ -1,6 +1,6 @@
 package cn.shuaijunlan.dubbo.learning.main;
 
-// import com.alibaba.dubbo.remoting.transport.netty.NettyHandler;
+// import com.alibaba.MEAT-INF.dubbo.remoting.transport.netty.NettyHandler;
 
 import static org.junit.Assert.*;
 

@@ -18,6 +18,7 @@
         <module>service-provider-a</module>
         <module>tcc-transaction-dubbo</module>
         <module>service-provider-b</module>
+        <module>service-provider-async</module>
     </modules>
     <properties>
         <dubbo.version>2.6.2</dubbo.version>
@@ -84,8 +85,8 @@
     <dependencies>
         <!--<dependency>-->
             <!--<groupId>com.alibaba</groupId>-->
-            <!--<artifactId>dubbo</artifactId>-->
-            <!--<version>${dubbo.version}</version>-->
+            <!--<artifactId>MEAT-INF.dubbo</artifactId>-->
+            <!--<version>${MEAT-INF.dubbo.version}</version>-->
         <!--</dependency>-->
     </dependencies>
 

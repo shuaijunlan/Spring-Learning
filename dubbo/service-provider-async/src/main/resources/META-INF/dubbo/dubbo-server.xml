@@ -13,11 +13,13 @@
     <dubbo:provider server="netty"/>
 
     <!--service configuration-->
-    <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo" loadbalance="roundrobin"/>
+    <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.ITestService" ref="testService" protocol="dubbo" loadbalance="roundrobin">
+        <dubbo:method name="sayHello" async="true"/>
+    </dubbo:service>
 
-    <bean class="cn.shuaijunlan.dubbo.TestServiceImpl" name="testService" />
+    <bean class="cn.shuaijunlan.dubbo.learning.service.impl.TestServiceImpl" name="testService" />
 
     <dubbo:service interface="cn.shuaijunlan.dubbo.learning.service.IAddName" ref="addName" protocol="dubbo"/>
 
-    <bean class="cn.shuaijunlan.dubbo.AddName" name="addName"/>
+    <bean class="cn.shuaijunlan.dubbo.learning.service.impl.AddName" name="addName"/>
 </beans>
