@@ -2,6 +2,8 @@ package cn.shuaijunlan.dubbo.learning.main;
 
 import org.apache.dubbo.common.compiler.Compiler;
 import org.apache.dubbo.common.extension.ExtensionLoader;
+import org.apache.dubbo.registry.Registry;
+import org.apache.dubbo.registry.RegistryFactory;
 import org.apache.dubbo.rpc.Protocol;
 import org.apache.dubbo.rpc.ProxyFactory;
 import org.apache.dubbo.rpc.cluster.Cluster;
@@ -16,6 +18,7 @@ public class DubboSPITest {
         // ExtensionLoader.getExtensionLoader(Protocol.class).getAdaptiveExtension();
         // ExtensionLoader.getExtensionLoader(Compiler.class).getAdaptiveExtension().compile("eee", Thread.currentThread().getContextClassLoader());
         // ExtensionLoader.getExtensionLoader(ProxyFactory.class).getAdaptiveExtension();
-        ExtensionLoader.getExtensionLoader(Cluster.class).getAdaptiveExtension();
+        // ExtensionLoader.getExtensionLoader(Cluster.class).getAdaptiveExtension();
+        ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
     }
 }
