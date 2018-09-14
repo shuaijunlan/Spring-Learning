@@ -13,6 +13,7 @@ import org.apache.dubbo.config.spring.schema.DubboNamespaceHandler;
 import org.apache.dubbo.registry.integration.RegistryDirectory;
 import org.apache.dubbo.registry.integration.RegistryProtocol;
 import org.apache.dubbo.remoting.Transporters;
+import org.apache.dubbo.remoting.exchange.ExchangeHandler;
 import org.apache.dubbo.remoting.exchange.Exchangers;
 import org.apache.dubbo.remoting.exchange.support.header.HeaderExchangeClient;
 import org.apache.dubbo.remoting.exchange.support.header.HeaderExchangeHandler;
@@ -32,6 +33,7 @@ import org.apache.dubbo.rpc.protocol.dubbo.DubboInvoker;
 import org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol;
 import org.apache.dubbo.rpc.protocol.dubbo.filter.FutureFilter;
 import org.apache.dubbo.rpc.proxy.InvokerInvocationHandler;
+import org.junit.Test;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
 
 /**
@@ -85,4 +87,12 @@ public class MainTest {
         // NettyServerHandler
         // ServiceBean
     }
+
+    @Test
+    public void test2(){
+        // ExchangeHandler exchangeHandler = (ExchangeHandler) new DubboProtocol();
+        // exchangeHandler.reply()
+
+    }
+
 }
