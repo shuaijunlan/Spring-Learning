@@ -10,9 +10,8 @@ ServiceConfig -> ServiceConfig: exportLocal()
 ProtocolAdaptive -> InjvmProtocol: export()
 InjvmProtocol -> InjvmExporter: new InjvmExporter()
 else remote[Dubbo]
-ServiceConfig -> ProtocolAdaptive: export()
-ProtocolAdaptive -> DubboProtocol: export()
-end
+ServiceConfig -> "Protocol$Adaptive": export()
+"Protocol$Adaptive" -> DubboProtocol: export()
 DubboProtocol -> DubboProtocol: openServer()
 DubboProtocol -> DubboProtocol: createServer()
 DubboProtocol -> Exchangers: bind()
@@ -22,8 +21,9 @@ Exchangers -> HeaderExchanger: bind()
 HeaderExchanger -> HeaderExchangerServer: new HeaderExchangerServer()
 HeaderExchangerServer -> Transporters: bind()
 Transporters -> Transporters: getTransporter()
-Transporters -> TransporterAdaptive: bind()
-TransporterAdaptive -> NettyTransporter: Dubbo SPI
+Transporters -> "Transporter$Adaptive": bind()
+"Transporter$Adaptive" -> NettyTransporter: Dubbo SPI
 NettyTransporter -> NettyServer: new NettyServer()
 NettyServer -> AbstractServer: doOpen()
+end
 @enduml
