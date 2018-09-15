@@ -1,0 +1,23 @@
+@startuml
+Actor -> Bootstrap: Bootstraping Dubbo Provider
+Bootstrap -> ServiceBean: Authentication Response
+ServiceBean -> ServiceConfig: export()
+ServiceConfig -> ServiceConfig: doExport()
+ServiceConfig -> ServiceConfig: doExportUrls()
+ServiceConfig -> ServiceConfig: doExportUrlsFor1Protocol()
+ServiceConfig -> ProtocolAdaptive: export()
+ProtocolAdaptive -> DubboProtocol: export()
+DubboProtocol -> DubboProtocol: openServer()
+DubboProtocol -> DubboProtocol: createServer()
+DubboProtocol -> Exchangers: bind()
+Exchangers -> Exchangers: bind()
+Exchangers -> Exchangers: getExchanger()
+Exchangers -> HeaderExchanger: bind()
+HeaderExchanger -> HeaderExchangerServer: new HeaderExchangerServer()
+HeaderExchangerServer -> Transporters: bind()
+Transporters -> Transporters: getTransporter()
+Transporters -> TransporterAdaptive: bind()
+TransporterAdaptive -> NettyTransporter: Dubbo SPI
+NettyTransporter -> NettyServer: new NettyServer()
+NettyServer -> AbstractServer: doOpen()
+@enduml
