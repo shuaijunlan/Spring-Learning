@@ -7,7 +7,8 @@ ServiceConfig -> ServiceConfig: doExportUrls()
 ServiceConfig -> ServiceConfig: doExportUrlsFor1Protocol()
 alt local[Injvm]
 ServiceConfig -> ServiceConfig: exportLocal()
-ProtocolAdaptive -> InjvmProtocol: export()
+ServiceConfig -> "Protocol$Adaptive": export()
+"Protocol$Adaptive" -> InjvmProtocol: export()
 InjvmProtocol -> InjvmExporter: new InjvmExporter()
 else remote[Dubbo]
 ServiceConfig -> "Protocol$Adaptive": export()
