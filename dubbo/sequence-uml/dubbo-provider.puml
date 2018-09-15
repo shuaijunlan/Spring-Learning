@@ -5,8 +5,14 @@ ServiceBean -> ServiceConfig: export()
 ServiceConfig -> ServiceConfig: doExport()
 ServiceConfig -> ServiceConfig: doExportUrls()
 ServiceConfig -> ServiceConfig: doExportUrlsFor1Protocol()
+alt local[Injvm]
+ServiceConfig -> ServiceConfig: exportLocal()
+ProtocolAdaptive -> InjvmProtocol: export()
+InjvmProtocol -> InjvmExporter: new InjvmExporter()
+else remote[Dubbo]
 ServiceConfig -> ProtocolAdaptive: export()
 ProtocolAdaptive -> DubboProtocol: export()
+end
 DubboProtocol -> DubboProtocol: openServer()
 DubboProtocol -> DubboProtocol: createServer()
 DubboProtocol -> Exchangers: bind()
