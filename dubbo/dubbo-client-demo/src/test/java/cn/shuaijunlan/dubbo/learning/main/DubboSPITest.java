@@ -19,6 +19,7 @@ public class DubboSPITest {
         // ExtensionLoader.getExtensionLoader(Compiler.class).getAdaptiveExtension().compile("eee", Thread.currentThread().getContextClassLoader());
         // ExtensionLoader.getExtensionLoader(ProxyFactory.class).getAdaptiveExtension();
         // ExtensionLoader.getExtensionLoader(Cluster.class).getAdaptiveExtension();
+        // ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
         ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
     }
 }
