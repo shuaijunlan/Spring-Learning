@@ -14,7 +14,7 @@ import org.apache.dubbo.rpc.cluster.Cluster;
  */
 public class DubboSPITest {
     public static void main(String[] args) {
-        // ExtensionLoader.getExtensionLoader(Protocol.class).getExtension("MEAT-INF.dubbo");
+        // ExtensionLoader.getExtensionLoader(Protocol.class).getExtension("dubbo");
         // ExtensionLoader.getExtensionLoader(Protocol.class).getAdaptiveExtension();
         // ExtensionLoader.getExtensionLoader(Compiler.class).getAdaptiveExtension().compile("eee", Thread.currentThread().getContextClassLoader());
         // ExtensionLoader.getExtensionLoader(ProxyFactory.class).getAdaptiveExtension();

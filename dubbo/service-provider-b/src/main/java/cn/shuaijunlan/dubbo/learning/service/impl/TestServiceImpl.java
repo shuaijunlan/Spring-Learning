@@ -7,7 +7,7 @@ import org.apache.dubbo.config.annotation.Service;
  * @author Junlan Shuai[shuaijunlan@gmail.com].
  * @date Created on 6:10 PM 2018/09/03.
  */
-@Service(protocol = "MEAT-INF.dubbo")
+@Service(protocol = "dubbo", loadbalance = "roundrobin")
 public class TestServiceImpl implements ITestService {
     @Override
     public String sayHello(String msg) {

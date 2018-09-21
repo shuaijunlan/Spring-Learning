@@ -18,7 +18,7 @@ public class Main {
         // EchoService echoService = (EchoService) service;
         // System.out.println(echoService.$echo("hello"));
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println(service.sayHello("Shuai Junlan" + i));
         }
 

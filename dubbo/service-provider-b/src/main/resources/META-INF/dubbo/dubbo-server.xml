@@ -9,7 +9,7 @@
     <dubbo:registry address="zookeeper://218.199.102.34:2181"/>
 
     <!--protocal configuration-->
-    <dubbo:protocol name="dubbo" port="20881"/>
+    <dubbo:protocol name="dubbo" port="20882"/>
 
     <dubbo:provider server="netty"/>
 
