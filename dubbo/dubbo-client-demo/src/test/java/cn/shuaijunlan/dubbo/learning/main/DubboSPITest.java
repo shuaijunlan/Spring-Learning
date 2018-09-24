@@ -4,6 +4,7 @@ import org.apache.dubbo.common.compiler.Compiler;
 import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.apache.dubbo.registry.Registry;
 import org.apache.dubbo.registry.RegistryFactory;
+import org.apache.dubbo.remoting.Dispatcher;
 import org.apache.dubbo.rpc.Protocol;
 import org.apache.dubbo.rpc.ProxyFactory;
 import org.apache.dubbo.rpc.cluster.Cluster;
@@ -20,6 +21,7 @@ public class DubboSPITest {
         // ExtensionLoader.getExtensionLoader(ProxyFactory.class).getAdaptiveExtension();
         // ExtensionLoader.getExtensionLoader(Cluster.class).getAdaptiveExtension();
         // ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
-        ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
+        // ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
+        ExtensionLoader.getExtensionLoader(Dispatcher.class).getAdaptiveExtension();
     }
 }
