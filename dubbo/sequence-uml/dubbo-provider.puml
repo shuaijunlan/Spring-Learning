@@ -1,5 +1,5 @@
 @startuml
-title Dubbo服务端时序图
+title Dubbo服务端---服务发布及响应时序图
 Actor Actor
 Actor -> Bootstrap: Bootstrapping
 Bootstrap -> ServiceBean: onApplicationEvent()
