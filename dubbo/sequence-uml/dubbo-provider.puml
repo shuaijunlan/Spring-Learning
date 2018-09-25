@@ -1,5 +1,7 @@
 @startuml
-Actor -> Bootstrap: Bootstraping Dubbo Provider
+title Dubbo服务端时序图
+Actor Actor
+Actor -> Bootstrap: Bootstrapping
 Bootstrap -> ServiceBean: onApplicationEvent()
 ServiceBean -> ServiceConfig: export()
 ServiceConfig -> ServiceConfig: doExport()
