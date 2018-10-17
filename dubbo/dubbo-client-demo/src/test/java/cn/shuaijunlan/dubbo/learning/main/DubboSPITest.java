@@ -8,6 +8,7 @@ import org.apache.dubbo.remoting.Dispatcher;
 import org.apache.dubbo.rpc.Protocol;
 import org.apache.dubbo.rpc.ProxyFactory;
 import org.apache.dubbo.rpc.cluster.Cluster;
+import org.apache.dubbo.rpc.cluster.RouterFactory;
 
 /**
  * @author Junlan Shuai[shuaijunlan@gmail.com].
@@ -22,6 +23,7 @@ public class DubboSPITest {
         // ExtensionLoader.getExtensionLoader(Cluster.class).getAdaptiveExtension();
         // ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
         // ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();
-        ExtensionLoader.getExtensionLoader(Dispatcher.class).getAdaptiveExtension();
+        // ExtensionLoader.getExtensionLoader(Dispatcher.class).getAdaptiveExtension();
+        ExtensionLoader.getExtensionLoader(RouterFactory.class).getAdaptiveExtension();
     }
 }
