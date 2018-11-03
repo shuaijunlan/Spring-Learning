@@ -11,7 +11,7 @@
     <artifactId>spring</artifactId>
     <url>http://maven.apache.org</url>
     <parent>
-        <artifactId>springlearning</artifactId>
+        <artifactId>spring-learning</artifactId>
         <groupId>cn.shuaijunlan</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>

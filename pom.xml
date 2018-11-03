@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.shuaijunlan</groupId>
-    <artifactId>springlearning</artifactId>
+    <artifactId>spring-learning</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -12,7 +12,7 @@
         <module>spring</module>
         <module>dubbo</module>
     </modules>
-    <name>springlearning Maven Webapp</name>
+    <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
     <dependencies>
     </dependencies>
@@ -31,6 +31,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>springlearning</finalName>
+        <finalName>${project.artifactId}</finalName>
     </build>
 </project>
