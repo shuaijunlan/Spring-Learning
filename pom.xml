@@ -11,6 +11,7 @@
         <module>springmvc</module>
         <module>spring</module>
         <module>dubbo</module>
+        <module>reactor-programming</module>
     </modules>
     <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
