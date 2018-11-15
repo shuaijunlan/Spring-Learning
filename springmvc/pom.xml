@@ -16,8 +16,8 @@
     </modules>
 
     <properties>
-        <spring.version>5.0.4.RELEASE</spring.version>
-        <jackson.version>2.9.2</jackson.version>
+        <spring.version>5.0.7.RELEASE</spring.version>
+        <jackson.version>2.9.5</jackson.version>
     </properties>
     <dependencies>
         <dependency>
