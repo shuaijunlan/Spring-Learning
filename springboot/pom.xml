@@ -13,7 +13,7 @@
     </parent>
 
     <modules>
-        <!--<module>zookeeperdemo</module>-->
+        <module>springboot-servlet</module>
     </modules>
 
     <properties>
