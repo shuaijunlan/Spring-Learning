@@ -18,6 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class PersonServiceTest {
     @Autowired
     private PersonService personService;
+
     @Test
     public void insertTwoPersons() throws Exception {
         personService.insertTwoPersons();

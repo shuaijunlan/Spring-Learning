@@ -7,12 +7,11 @@ package cn.shuaijunlan.learning.springboot.enums;
 public enum ResponseResultEnum {
     UNKNOWN_ERROR(-1, "Unknown exception"),
     SUCCESS(100, "Successfully"),
-    FORBIDDEN(403, "Forbidden")
-    ;
+    FORBIDDEN(403, "Forbidden");
     private Integer code;
     private String msg;
 
-    ResponseResultEnum(Integer code, String msg){
+    ResponseResultEnum(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }

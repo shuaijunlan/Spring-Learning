@@ -22,7 +22,7 @@ public class RequestAspect {
     @Pointcut("execution(* cn.shuaijunlan.learning.springboot.controller.PersonControllerExample.*(..))")
 //    @Pointcut("execution(public * sample.aop.service.PersonService.insertTwoPersons())"
 //    @Pointcut("execution(* sample..*Service.*(..))")
-    public void log(){
+    public void log() {
 
     }
 
@@ -37,16 +37,17 @@ public class RequestAspect {
         logger.info("class_method={}.{}", joinPoint.getSignature().getDeclaringTypeName(), joinPoint.getSignature().getName());
         logger.info("args={}", joinPoint.getArgs());
     }
+
     @After("log()")
-    public void doAfter(){
+    public void doAfter() {
         logger.info("hello doAfter");
     }
 
     @AfterReturning(returning = "object", pointcut = "log()")
-    public void doAfterReturning(Object object){
-        if (object == null){
+    public void doAfterReturning(Object object) {
+        if (object == null) {
             logger.info("response={}", "returning object is null pointer!");
-        }else {
+        } else {
             logger.info("response={}", object.toString());
         }
     }

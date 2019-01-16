@@ -22,6 +22,7 @@ import static org.junit.Assert.*;
 public class PersonControllerExampleTest {
     @Autowired
     private MockMvc mockMvc;
+
     @Test
     public void getPersonList() throws Exception {
 

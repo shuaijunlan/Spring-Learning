@@ -82,13 +82,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com.alibaba</groupId>-->
-            <!--<artifactId>MEAT-INF.dubbo</artifactId>-->
-            <!--<version>${MEAT-INF.dubbo.version}</version>-->
-        <!--</dependency>-->
-    </dependencies>
 
     <build>
         <plugins>

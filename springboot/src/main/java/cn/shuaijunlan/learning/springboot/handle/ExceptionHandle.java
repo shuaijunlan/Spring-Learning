@@ -20,8 +20,8 @@ public class ExceptionHandle {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public ResponseResult handle(Exception e){
-        if (e instanceof PersonException){
+    public ResponseResult handle(Exception e) {
+        if (e instanceof PersonException) {
             PersonException personException = (PersonException) e;
             return ResponseResultUtil.fail(personException.getCode(), personException.getMessage(), null);
         }

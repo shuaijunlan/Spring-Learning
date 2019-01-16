@@ -22,14 +22,14 @@ public class PersonService {
     private PersonRepository personRepository;
 
     @Transactional(rollbackFor = Exception.class)
-    public  void insertTwoPersons() {
+    public void insertTwoPersons() {
 
-        Person personA = new  Person();
+        Person personA = new Person();
         personA.setAge(25);
         personA.setHeight(1.22F);
         personA.setName("lc");
 
-        Person personB = new  Person();
+        Person personB = new Person();
         personB.setAge(26);
         personB.setHeight(1.56F);
         personB.setName("lc1");
@@ -42,12 +42,12 @@ public class PersonService {
         Optional<Person> person = personRepository.findById(id);
 
 
-        if (!person.isPresent()){
+        if (!person.isPresent()) {
             return null;
         }
         Integer age = person.get().getAge();
         Integer limitAge = 20;
-        if (age < limitAge){
+        if (age < limitAge) {
             throw new PersonException(ResponseResultEnum.FORBIDDEN);
         }
         // If I don't add this statement, it will throw NullPointer Exception, why?

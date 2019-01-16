@@ -29,26 +29,28 @@ public class PersonControllerExample {
     private PersonService personService;
 
     @GetMapping(value = "/personList")
-    public List<Person> getPersonList(){
+    public List<Person> getPersonList() {
         return personRepository.findAll();
     }
 
     /**
      * add a person
+     *
      * @param person
      * @return
      */
     @PostMapping(value = "/addPerson")
-    public ResponseResult<Person> addPerson(@Valid Person person, BindingResult bindingResult){
+    public ResponseResult<Person> addPerson(@Valid Person person, BindingResult bindingResult) {
         ResponseResult<Person> responseResult = new ResponseResult<>();
 
         //  没有验证通过
-        if (bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             return ResponseResultUtil.fail(1, bindingResult.getFieldError().getDefaultMessage(), null);
-        }else {
+        } else {
             return ResponseResultUtil.success(personRepository.save(person));
         }
     }
+
     @GetMapping(value = "/person/getAge/{id}")
     public Person getAgeById(@PathVariable("id") Integer id) throws Exception {
         return personService.getPersonById(id);

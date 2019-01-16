@@ -9,12 +9,12 @@ import cn.shuaijunlan.learning.springboot.enums.ResponseResultEnum;
 public class PersonException extends RuntimeException {
     private Integer code;
 
-    public PersonException (Integer code, String msg){
+    public PersonException(Integer code, String msg) {
         super(msg);
         this.code = code;
     }
 
-    public PersonException(ResponseResultEnum responseResultEnum){
+    public PersonException(ResponseResultEnum responseResultEnum) {
         super(responseResultEnum.getMsg());
         this.code = responseResultEnum.getCode();
     }

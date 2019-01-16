@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 @ServletComponentScan
 public class SpringbootServletApplication {
     @Bean
-    public ServletRegistrationBean<MyServlet> servletRegistrationBean(){
+    public ServletRegistrationBean<MyServlet> servletRegistrationBean() {
         return new ServletRegistrationBean<>(new MyServlet(), "/servlet1");
     }
 

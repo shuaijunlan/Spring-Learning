@@ -30,7 +30,7 @@ public class PersonPropertiesTest {
 
 
     @Test
-    public void test1(){
+    public void test1() {
         System.out.println(name + ":" + age + ":" + height);
     }
 
@@ -41,8 +41,9 @@ public class PersonPropertiesTest {
      */
     @Autowired
     private PersonProperties personProperties;
+
     @Test
-    public void test2(){
+    public void test2() {
         System.out.println(personProperties.toString());
     }
 
