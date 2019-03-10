@@ -12,6 +12,8 @@
         <module>spring</module>
         <module>dubbo</module>
         <module>reactor-programming</module>
+        <module>redis-learning</module>
+        <module>rocketmq-learning</module>
     </modules>
     <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
