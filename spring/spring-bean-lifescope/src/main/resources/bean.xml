@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myBeanPostProcessor" class="cn.shuaijunlan.spring.bean.lifecycle.MyBeanPostProcessor"/>
+    <bean id="myInstantiationAwareBeanPostProcessor" class="cn.shuaijunlan.spring.bean.lifecycle.MyInstantiationAwareBeanPostProcessor"/>
+    <bean id="myBeanFactoryPostProcessor" class="cn.shuaijunlan.spring.bean.lifecycle.MyBeanFactoryPostProcessor"/>
+
+    <bean id="person" class="cn.shuaijunlan.spring.bean.lifecycle.Person" init-method="myInit" destroy-method="myDestroy" lazy-init="true">
+        <property name="name" value="shuaijunlan"/>
+        <property name="phone" value="1111"/>
+        <property name="address" value="hello"/>
+    </bean>
+</beans>

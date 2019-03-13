@@ -7,6 +7,7 @@
         <module>spring-transaction</module>
         <module>spring-xml-schema-extension</module>
         <module>spring-ioc</module>
+        <module>spring-bean-lifescope</module>
     </modules>
     <artifactId>spring</artifactId>
     <url>http://maven.apache.org</url>

@@ -9,11 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-beans</artifactId>
-
-    <properties>
-        <spring.verion>5.0.4.RELEASE</spring.verion>
-    </properties>
+    <artifactId>spring-bean-lifescope</artifactId>
 
     <dependencies>
         <dependency>
@@ -55,5 +51,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
