@@ -26,4 +26,5 @@
     </bean>
     <context:component-scan base-package="cn.shuaijunlan.spring.transaction"/>
     <tx:annotation-driven proxy-target-class="true" transaction-manager="appTransactionManager" />
+
 </beans>

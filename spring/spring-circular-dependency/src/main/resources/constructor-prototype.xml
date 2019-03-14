@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="cn.shuaijunlan.spring.circular.dependency.constructor.BeanA" id="beanA" scope="prototype">
+        <constructor-arg index="0" ref="beanB"/>
+    </bean>
+    <bean class="cn.shuaijunlan.spring.circular.dependency.constructor.BeanB" id="beanB" scope="prototype">
+        <constructor-arg index="0" ref="beanC"/>
+    </bean>
+    <bean class="cn.shuaijunlan.spring.circular.dependency.constructor.BeanC" id="beanC" scope="prototype">
+        <constructor-arg index="0" ref="beanA"/>
+    </bean>
+</beans>
