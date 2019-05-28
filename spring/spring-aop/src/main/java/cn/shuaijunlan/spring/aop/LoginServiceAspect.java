@@ -8,6 +8,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 
@@ -16,17 +17,17 @@ import org.springframework.stereotype.Component;
  * @since Created in 3:59 PM 5/28/19.
  */
 @Aspect
+@Order(2)
 @Component
 public class LoginServiceAspect {
-    @Before("execution(public boolean *.login(..))")
-    public void loginBefore(JoinPoint joinPoint){
-        System.out.println("LoginService.login() : " + joinPoint.getSignature().getName());
-    }
-
     @Pointcut("execution(public boolean *.login(..))")
     public void pointcutName(){}
 
-    public void within(){}
+
+    @Before("pointcutName()")
+    public void loginBefore(JoinPoint joinPoint){
+        System.out.println("LoginService.login() : " + joinPoint.getSignature().getName());
+    }
 
     @Around("pointcutName()")
     public Object performanceTrace(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
