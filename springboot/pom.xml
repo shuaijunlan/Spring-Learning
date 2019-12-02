@@ -19,6 +19,8 @@
         <module>springboot-war</module>
         <module>springboot-webflux</module>
         <module>spring-boot-thymeleaf</module>
+        <module>springboot-velocity</module>
+        <module>springboot-freemarker</module>
     </modules>
 
     <properties>
