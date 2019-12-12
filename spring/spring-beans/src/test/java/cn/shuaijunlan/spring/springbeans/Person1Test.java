@@ -41,7 +41,7 @@ public class Person1Test {
     @Test
     public void test2(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
-        System.out.println(applicationContext.getBean("&person1"));
+        // System.out.println(applicationContext.getBean("&person1"));
     }
 
 }
